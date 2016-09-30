@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<% if (htmlWebpackPlugin.options.isDev) { %>
+<html>
+<% } else { %>
+<html manifest="/content/<%= htmlWebpackPlugin.options.appName %>/manifest.appcache">
+<% } %>
+  <head>
+    <meta charset="utf-8">
+    <title>Lunch Order</title>
+  </head>
+
+  <body>
+     <!-- <script>
+        // Allows react devtools to work in browser (across iframes)
+        __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
+    </script> -->
+    <div id="body-container"></div>
+
+    <script src="/bundle.js"></script>
+  </body>
+</html>

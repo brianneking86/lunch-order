@@ -1,13 +1,15 @@
 // routes.jsx
 import React from 'react';
-import Router from 'react-router';
-const Route = Router.Route;
-const DefaultRoute = Router.DefaultRoute;
+import { Route, IndexRoute } from 'react-router';
+import ReactRouter from 'react-router';
 
-import HomePage from './components/home-page.jsx';
+import App from './components/app';
+import IndexPage from './components/index-page';
 
-module.exports = (
-  <Route name="app" path="/" handler={HomePage}>
-    <DefaultRoute handler={HomePage} />
+let routes = (
+  <Route path="/" component={App}>
+    <IndexRoute component={IndexPage} />
   </Route>
 );
+
+export default routes;
