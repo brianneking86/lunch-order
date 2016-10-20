@@ -60,15 +60,12 @@ gulp.task('build', ['clear'], function(cb) {
         console.log(require('yargs').help());
     } else {
         var isDev = !!argv.D;
-        // Set default IP/port if none provided
         var ip = argv.ip || 'localhost';
-        var port = argv.port || (isDev ? '4080' : '8080');
-        console.log('url: %s:%s; dev ? %s', ip, port, isDev);
 
         build({
             ip: ip,
             isDev: isDev,
-            port: port
+            port: 4080
         }, cb);
     }
 });
