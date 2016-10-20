@@ -1,5 +1,5 @@
 {
-  "name": "carrot-frontend",
+  "name": "lunchOrder",
   "version": "0.0.2",
   "dependencies": { 
     "normalize.css": "~3.0.2",
