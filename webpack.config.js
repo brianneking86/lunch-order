@@ -1,12 +1,7 @@
-var node_dir = __dirname + '/node_modules',
-    Webpack = require('webpack');
-
-var appVariables = {
-    __DEVELOPMENT_MODE__: JSON.stringify(process.env.DEVELOPMENT_MODE),
-};
+var Webpack = require('webpack');
 
 module.exports = {
-    entry: './app/assets/javascripts/app.jsx',
+    entry: './app/assets/javascripts/main.jsx',
     output: {
         filename: 'index.js',
         path: './app/assets/javascripts/'
@@ -14,11 +9,13 @@ module.exports = {
     resolve: {
         extensions: ['', '.js', '.jsx'],
         alias: {},
-        root: [__dirname + '/app/assets/javascripts', __dirname + '/app/assets/stylesheets']
+        root: ['./app/assets/javascripts']
     },
     devServer: {
         inline: true,
-        port: 3333
+        port: 3333,
+        publicPath: '/',
+        contentBase: './app/assets/javascripts/'
     },
     module: {
         loaders: [

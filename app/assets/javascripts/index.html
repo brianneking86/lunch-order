@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<% if (htmlWebpackPlugin.options.isDev) { %>
-<html>
-<% } else { %>
-<html manifest="/content/<%= htmlWebpackPlugin.options.appName %>/manifest.appcache">
-<% } %>
   <head>
     <meta charset="utf-8">
     <title>Lunch Order</title>
@@ -16,6 +11,6 @@
     </script> -->
     <div id="body-container"></div>
 
-    <script src="/bundle.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>
